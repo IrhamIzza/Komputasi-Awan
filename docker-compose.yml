@@ -3,8 +3,6 @@ services:
   php-apache-environment:
     image: irham123/quiz2
     container_name: php-apache
-    depends_on:
-      - db
     volumes:
       - ./php/src:/var/www/html/
     ports:
