@@ -1,12 +1,12 @@
 version: '3.8'
 services:
   php-apache-environment:
-    image: irham/quiz2
+    image: irham123/quiz2
     container_name: php-apache
     depends_on:
       - db
     volumes:
-      - ./Source
+      - ./php/src:/var/www/html/
     ports:
       - 8000:80
     networks:
@@ -18,12 +18,12 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: php_user
+      MYSQL_DATABASE: kitchen
     ports:
       - "3306:3306"
     volumes:
       - db:/var/lib/mysql
-      - ./php_user.sql:/docker-entrypoint-initdb.d/praktikumdb (3).sql
+      - ./php_user.sql:/docker-entrypoint-initdb.d/praktikumdb.sql
     networks:
       - backend
 

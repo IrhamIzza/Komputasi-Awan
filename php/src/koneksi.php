@@ -1,7 +1,7 @@
 <?php
-	$namaHost = "132.145.113.218";
-	$username = "admin";
-	$password = "Admin123";
+	$namaHost = "172.20.0.2";
+	$username = "root";
+	$password = "admin";
 	$database = "kitchen";
 
 	$connect = mysqli_connect($namaHost, $username, $password, $database);

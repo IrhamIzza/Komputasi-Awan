@@ -27,6 +27,9 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `user`
 --
+CREATE DATABASE IF NOT EXISTS `kitchen` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `kitchen`;
+
 
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
