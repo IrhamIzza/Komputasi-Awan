@@ -12,24 +12,6 @@ services:
     networks:
       - backend
 
-  db:
-    container_name: db
-    image: mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: admin
-      MYSQL_DATABASE: kitchen
-    ports:
-      - "3306:3306"
-    volumes:
-      - db:/var/lib/mysql
-      - ./php_user.sql:/docker-entrypoint-initdb.d/praktikumdb.sql
-    networks:
-      - backend
-
-volumes:
-  db:
-
 networks:
   backend:
     name: backend-network
